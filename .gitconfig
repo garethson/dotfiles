@@ -1,0 +1,31 @@
+[user]
+  name = Gareth du Plooy
+  email = gduplooy@gmail.com
+[mergetool]
+  keepBackup = true
+
+[hub]
+  protocol = https
+
+[credential]
+  helper = osxkeychain
+
+[core]
+  editor = vim
+[alias]
+  ci = commit
+  co = checkout
+  st = status
+  br = branch
+  amend = commit --amend --no-edit
+  pfo = push --force origin
+  rhh = reset HEAD --hard
+  p = pull
+
+[push]
+  default = simple
+[pull]
+  rebase = true
+[color]
+  ui = true
+

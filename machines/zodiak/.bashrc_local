@@ -1,0 +1,21 @@
+if [ -n "$BASH_VERSION" ] || [ -n "$ZSH_VERSION" ]; then
+	source /usr/local/share/chruby/chruby.sh
+	source /usr/local/share/chruby/auto.sh
+fi
+
+if [ ! -f ~/.git-completion.bash ]; then
+  CURL='/usr/bin/curl'
+  MY_URL="https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash"
+  CURLARGS="-f -s -S -k"
+  $CURL $CURLARGS $MY_URL > ~/.git-completion.bash
+fi
+
+if [ -f ~/.git-completion.bash ]; then
+  . ~/.git-completion.bash
+fi
+
+export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:$PATH"
+
+export BUNDLER_EDITOR=/usr/local/bin/subl
+
+chruby ruby-2.3.1
