@@ -28,6 +28,10 @@ HISTFILE=~/.zsh_history
 SAVEHIST=50000
 HISTSIZE=50000
 
+bk() {
+  branch_name=$(git rev-parse --abbrev-ref HEAD)
+  open "https://buildkite.com/shopify/shopify-branches/builds?branch=${branch_name}" 2> /dev/null
+}
 
 typeset WORDCHARS="*?_-.[]~=&;!#$%^(){}<>"
 
@@ -35,8 +39,9 @@ alias be='bundle exec'
 alias git_rm='git co master && git pull && git co - && git rebase master'
 alias git_c="git branch|grep '*'|tr -d '* \n'|pbcopy"
 alias git_cm='git branch --merged | grep -v "\*" | xargs -n 1 git branch -d'
-alias gith='gitit branch master'
+alias gh='gitit branch master'
 alias gt='gittower .'
+alias rspecof='rspec --only-failures'
 
 unalias grb
 

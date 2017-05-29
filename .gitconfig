@@ -1,6 +1,6 @@
 [user]
-  name = Gareth du Plooy
-  email = gduplooy@gmail.com
+	name = Gareth du Plooy
+	email = gduplooy@gmail.com
 [mergetool]
   keepBackup = true
 
