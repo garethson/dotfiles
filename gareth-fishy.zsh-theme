@@ -17,8 +17,8 @@ PROMPT2='%{$fg[red]%}\ %{$reset_color%}'
 local return_status="%{$fg_bold[red]%}%(?..%?)%{$reset_color%}"
 RPROMPT='${return_status}%{$reset_color%}'
 
-ZSH_THEME_GIT_PROMPT_PREFIX="{"
-ZSH_THEME_GIT_PROMPT_SUFFIX="} "
+ZSH_THEME_GIT_PROMPT_PREFIX="["
+ZSH_THEME_GIT_PROMPT_SUFFIX="] "
 ZSH_THEME_GIT_PROMPT_DIRTY=""
 ZSH_THEME_GIT_PROMPT_CLEAN=""
 

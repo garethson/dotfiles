@@ -41,7 +41,7 @@ alias git_c="git branch|grep '*'|tr -d '* \n'|pbcopy"
 alias git_cm='git branch --merged | grep -v "\*" | xargs -n 1 git branch -d'
 alias gh='gitit branch master'
 alias gt='gittower .'
-alias rspecof='rspec --only-failures'
+alias rspecof='bundle exec rspec --only-failures'
 
 unalias grb
 
