@@ -386,11 +386,6 @@ Style/StabbyLambdaParentheses:
   - require_parentheses
   - require_no_parentheses
 
-Style/StringLiteralsInInterpolation:
-  SupportedStyles:
-  - single_quotes
-  - double_quotes
-
 Style/SpaceAroundBlockParameters:
   EnforcedStyleInsidePipes: no_space
   SupportedStylesInsidePipes:
@@ -494,7 +489,10 @@ Style/WordArray:
   WordRegex: !ruby/regexp /\A[\p{Word}\n\t]+\z/
 
 Metrics/BlockNesting:
-  Max: 3
+  Max: 4
+
+Metrics/LineLength:
+  Max: 180
 
 Metrics/ParameterLists:
   Max: 5
@@ -1114,3 +1112,6 @@ Security/Eval:
 
 Security/JSONLoad:
   Enabled: true
+
+Documentation:
+  Enabled: false
