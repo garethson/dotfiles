@@ -387,7 +387,6 @@ Style/StabbyLambdaParentheses:
   - require_no_parentheses
 
 Style/StringLiteralsInInterpolation:
-  EnforcedStyle: single_quotes
   SupportedStyles:
   - single_quotes
   - double_quotes
@@ -484,7 +483,7 @@ Style/VariableName:
   - camelCase
 
 Style/WhileUntilModifier:
-  MaxLineLength: 80
+  MaxLineLength: 200
 
 Style/WordArray:
   EnforcedStyle: percent
