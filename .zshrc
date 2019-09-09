@@ -47,6 +47,8 @@ unalias grb
 
 bindkey "^[k" up-line-or-beginning-search # Up. Press "ctrl+v" in the terminal, the your key to find out the code to put.
 bindkey "^[j" down-line-or-beginning-search # Down
+bindkey '[D' backward-word
+bindkey '[C' forward-word
 
 export EDITOR=/usr/local/bin/subl
 export BUNDLER_EDITOR=/usr/local/bin/subl
@@ -58,3 +60,9 @@ export TDD=1
 export HEROKU_ORGANIZATION=shopify
 
 [ -f /opt/dev/dev.sh ] && source /opt/dev/dev.sh
+plugins+=(git-it-on)
+
+# NVM
+export NVM_DIR=~/.nvm
+source $(brew --prefix nvm)/nvm.sh
+plugins+=(git-it-on)
