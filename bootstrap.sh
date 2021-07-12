@@ -25,3 +25,7 @@ for file in $files; do
     ln -s $dir/$file ~/$file
 done
 
+if [[ $SPIN ]]; then
+    echo "spin git config"
+    git config --global --unset-all credential.helper
+fi
