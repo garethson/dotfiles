@@ -10,3 +10,6 @@ fi
 if [[ -f /opt/dev/dev.sh ]] && [[ $- == *i* ]]; then
   source /opt/dev/dev.sh
 fi
+
+# cloudplatform: add Shopify clusters to your local kubernetes config
+export KUBECONFIG=${KUBECONFIG:+$KUBECONFIG:}/Users/garethduplooy/.kube/config:/Users/garethduplooy/.kube/config.shopify.cloudplatform

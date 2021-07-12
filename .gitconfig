@@ -6,20 +6,17 @@
 
 [hub]
   protocol = https
-
-[credential]
-  helper = osxkeychain
-
 [core]
   editor = vim
 	commitGraph = true
+	excludesfile = /Users/garethduplooy/.gitignore_global
 [alias]
   ci = commit
   co = checkout
   st = status
   br = branch
   amend = commit --amend --no-edit
-  pfo = push --force origin
+  pfo = push --force-with-lease origin
   rhh = reset HEAD --hard
   p = pull
 
@@ -43,3 +40,11 @@
 	branch = false
 [gc]
 	writeCommitGraph = true
+[filter "lfs"]
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+[credential]
+	helper =
+	helper = store --file /opt/dev/var/private/git_credential_store
